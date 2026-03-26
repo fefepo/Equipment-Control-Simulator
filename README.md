@@ -1,7 +1,7 @@
 # Equipment Control Simulator ⚙️
 
-## 상태 다이어그램 
-<img width="503" height="496" alt="TCP drawio" src="https://github.com/user-attachments/assets/427e4173-8aeb-4ec4-9f0a-40b34a2d2890" />
+## state-diagram 
+<img width="503" height="400" alt="TCP drawio" src="https://github.com/user-attachments/assets/427e4173-8aeb-4ec4-9f0a-40b34a2d2890" />
 
 
 ## 프로젝트 개요
