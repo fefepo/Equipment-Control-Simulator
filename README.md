@@ -1,5 +1,9 @@
 # Equipment Control Simulator ⚙️
 
+## 상태 다이어그램 
+<img width="503" height="496" alt="TCP drawio" src="https://github.com/user-attachments/assets/427e4173-8aeb-4ec4-9f0a-40b34a2d2890" />
+
+
 ## 프로젝트 개요
 장비 제어 소프트웨어의 구조를 이해하기 위해  
 상태 머신 기반으로 장비의 동작을 모델링하고,  
