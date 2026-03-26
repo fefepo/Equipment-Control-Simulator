@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="EquipmentControlSimulator.vcxproj" Id="bf627379-bcab-4e1c-a883-ab9ad945a931" />
+</Solution>
