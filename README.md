@@ -14,7 +14,7 @@
 
 ## ⚙️ 주요 기능
 - 상태 머신 기반 장비 제어
-  - IDLE → INITIALIZING → READY → RUNNING → STOPPING → READY / ERROR
+  - IDLE → INITIALIZING → READY → RUNNING → STOPPING / ERROR → READY / IDLE
 - 공정 시퀀스 제어
   - LOAD → HEAT → PROCESS → COOLING → UNLOAD
 - 인터락(안전 조건) 감시
