@@ -1,6 +1,6 @@
 # Equipment Control Simulator ⚙️
 
-## State-diagram 
+## diagram 
 <img width="503" height="496" alt="TCP drawio" src="https://github.com/user-attachments/assets/427e4173-8aeb-4ec4-9f0a-40b34a2d2890" />
 
 
