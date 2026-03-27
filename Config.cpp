@@ -87,6 +87,10 @@ bool Config::load(const std::string& filename) {
         pressureThreshold = std::stod(value);
     }
 
+    if (extractValue(json, "speedThreshold", value)) {
+        speedThreshold = std::stod(value);
+    }
+
     if (extractValue(json, "updateIntervalMs", value)) {
         updateIntervalMs = std::stoi(value);
     }

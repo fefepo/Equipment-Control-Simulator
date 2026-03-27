@@ -1,6 +1,7 @@
 {
-  "port": 5000,
-  "tempThreshold": 100.0,
-  "pressureThreshold": 3.0,
-  "updateIntervalMs": 100
+    "port": 5000,
+    "tempThreshold": 100.0,
+    "pressureThreshold": 5.0,
+    "speedThreshold": 1300,
+    "updateIntervalMs": 100
 }

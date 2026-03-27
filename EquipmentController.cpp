@@ -263,6 +263,14 @@ void EquipmentController::update() {
             return;
         }
 
+        if (motorSpeed > config.speedThreshold) {
+            motorSpeed = 0;
+            setAlarm("E003", "Overspeed detected during step " + toString(currentStep));
+            changeStep(ProcessStep::NONE);
+            changeState(EquipmentState::ERROR);
+            return;
+        }
+
         break;
 
     case EquipmentState::STOPPING:

@@ -6,3 +6,6 @@ Timestamp,AlarmCode,AlarmMessage
 2026-03-27 02:56:34,E002,Overpressure detected during step PROCESS
 2026-03-27 02:56:54,E002,Overpressure detected during step PROCESS
 2026-03-27 02:57:28,E002,Overpressure detected during step LOAD
+2026-03-27 19:02:58,E001,Overheat detected during step HEAT
+2026-03-27 19:08:10,E001,Overheat detected during step PROCESS
+2026-03-27 19:14:12,E001,Overheat detected during step COOLING
