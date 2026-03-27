@@ -5,6 +5,7 @@
 #include <cctype>
 #include <sstream>
 
+// enum → 문자열 변환 (로그/출력용)
 std::string toString(EquipmentState state) {
     switch (state) {
     case EquipmentState::IDLE: return "IDLE";
@@ -17,6 +18,7 @@ std::string toString(EquipmentState state) {
     }
 }
 
+// 공정 단계 문자열 변환
 std::string toString(ProcessStep step) {
     switch (step) {
     case ProcessStep::NONE: return "NONE";
@@ -29,6 +31,7 @@ std::string toString(ProcessStep step) {
     }
 }
 
+// 동작 모드 문자열 변환
 std::string toString(OperationMode mode) {
     switch (mode) {
     case OperationMode::MANUAL: return "MANUAL";
@@ -38,6 +41,7 @@ std::string toString(OperationMode mode) {
 }
 
 namespace {
+    // 공백 제거 + 대문자 변환 → 명령어 표준화
     std::string normalizeCommand(const std::string& input) {
         std::string result;
 
@@ -49,7 +53,7 @@ namespace {
 
         return result;
     }
-
+    // 문자열 전체 대문자 변환
     std::string toUpperCopy(const std::string& input) {
         std::string result = input;
         for (char& ch : result) {
@@ -59,10 +63,12 @@ namespace {
     }
 }
 
+// 생성자 (Logger, Config 참조 저장)
 EquipmentController::EquipmentController(Logger& logRef, const Config& cfg)
     : logger(logRef), config(cfg) {
 }
 
+// 상태 변경 + 로그 기록
 void EquipmentController::changeState(EquipmentState newState) {
     if (state != newState) {
         std::string oldState = toString(state);
@@ -72,6 +78,7 @@ void EquipmentController::changeState(EquipmentState newState) {
     }
 }
 
+// 공정 단계 변경 + tick 초기화
 void EquipmentController::changeStep(ProcessStep newStep) {
     if (currentStep != newStep) {
         std::string oldStep = toString(currentStep);
@@ -82,6 +89,7 @@ void EquipmentController::changeStep(ProcessStep newStep) {
     }
 }
 
+// 알람 설정 + 기록 저장 + 로그/CSV 출력
 void EquipmentController::setAlarm(const std::string& code, const std::string& message) {
     activeAlarmCode = code;
     activeAlarmMessage = message;
@@ -93,12 +101,14 @@ void EquipmentController::setAlarm(const std::string& code, const std::string& m
     logger.logAlarmToCsv(activeAlarmCode, activeAlarmMessage);
 }
 
+// 알람 초기화
 void EquipmentController::clearAlarm() {
     activeAlarmCode = "NONE";
     activeAlarmMessage = "No active alarm";
     logger.log("ALARM CLEARED");
 }
 
+// 알람 히스토리 문자열 반환
 std::string EquipmentController::getAlarmHistoryString() const {
     if (alarmHistory.empty()) {
         return "No alarm history";
@@ -115,6 +125,7 @@ std::string EquipmentController::getAlarmHistoryString() const {
     return oss.str();
 }
 
+// INIT 명령 → IDLE → INITIALIZING
 void EquipmentController::init() {
     std::lock_guard<std::mutex> lock(mtx);
     logger.log("CMD INIT");
@@ -127,6 +138,7 @@ void EquipmentController::init() {
     }
 }
 
+// START 명령 → 공정 시작
 void EquipmentController::start() {
     std::lock_guard<std::mutex> lock(mtx);
     logger.log("CMD START");
@@ -142,6 +154,7 @@ void EquipmentController::start() {
     }
 }
 
+// STOP 명령 → 정지 단계 진입
 void EquipmentController::stop() {
     std::lock_guard<std::mutex> lock(mtx);
     logger.log("CMD STOP");
@@ -155,6 +168,7 @@ void EquipmentController::stop() {
     }
 }
 
+// RESET → ERROR 상태에서 초기화
 void EquipmentController::reset() {
     std::lock_guard<std::mutex> lock(mtx);
     logger.log("CMD RESET");
@@ -173,6 +187,7 @@ void EquipmentController::reset() {
     }
 }
 
+// 시스템 주기 업데이트 (핵심 로직)
 void EquipmentController::update() {
     std::lock_guard<std::mutex> lock(mtx);
 
@@ -186,7 +201,8 @@ void EquipmentController::update() {
 
     case EquipmentState::RUNNING:
         stepTick++;
-
+        
+        // 공정 단계별 동작
         switch (currentStep) {
         case ProcessStep::LOAD:
             motorSpeed = 600;
@@ -246,7 +262,8 @@ void EquipmentController::update() {
             motorSpeed = 0;
             break;
         }
-
+        
+        // 임계값 초과 시 알람 발생
         if (temperature > config.tempThreshold) {
             motorSpeed = 0;
             setAlarm("E001", "Overheat detected during step " + toString(currentStep));
@@ -298,6 +315,7 @@ void EquipmentController::update() {
     }
 }
 
+// 현재 상태 문자열 반환
 std::string EquipmentController::getStatusString() const {
     std::lock_guard<std::mutex> lock(mtx);
 
@@ -311,10 +329,12 @@ std::string EquipmentController::getStatusString() const {
         ", AlarmMessage=" + activeAlarmMessage;
 }
 
+// 상태 출력
 void EquipmentController::printStatus() const {
     std::cout << "[STATUS] " << getStatusString() << "\n";
 }
 
+// 문자열 명령어 실행 (핵심 인터페이스)
 std::string EquipmentController::executeCommand(const std::string& rawCommand) {
     std::string upperRaw = toUpperCopy(rawCommand);
     std::string command = normalizeCommand(rawCommand);
