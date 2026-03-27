@@ -14,14 +14,17 @@
 #include <sys/socket.h>
 #endif
 
+// TCP 서버 생성자
 TcpServer::TcpServer(EquipmentController& ctrl, Logger& logRef, int listenPort)
     : controller(ctrl), logger(logRef), port(listenPort) {
 }
 
+// 객체 소멸 시 서버 종료
 TcpServer::~TcpServer() {
     stop();
 }
 
+// 서버 스레드 시작
 void TcpServer::start() {
     if (running) {
         return;
@@ -31,6 +34,7 @@ void TcpServer::start() {
     serverThread = std::thread(&TcpServer::serverLoop, this);
 }
 
+// 서버 종료 및 소켓 정리
 void TcpServer::stop() {
     if (!running) {
         return;
@@ -55,8 +59,11 @@ void TcpServer::stop() {
     }
 }
 
+// TCP 서버 메인 루프
 void TcpServer::serverLoop() {
 #ifdef _WIN32
+    
+    // 윈도우 소켓 초기화
     WSADATA wsaData{};
     int wsaResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
     if (wsaResult != 0) {
@@ -64,7 +71,8 @@ void TcpServer::serverLoop() {
         return;
     }
 #endif
-
+    
+    // 서버 소켓 생성
     serverSocket = static_cast<int>(socket(AF_INET, SOCK_STREAM, 0));
     if (serverSocket < 0) {
         logger.log("TCP ERROR socket creation failed");
@@ -78,7 +86,8 @@ void TcpServer::serverLoop() {
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_addr.s_addr = INADDR_ANY;
     serverAddr.sin_port = htons(static_cast<u_short>(port));
-
+    
+    // 포트 바인딩
     if (bind(serverSocket, reinterpret_cast<sockaddr*>(&serverAddr), sizeof(serverAddr)) < 0) {
         logger.log("TCP ERROR bind failed");
 #ifdef _WIN32
@@ -90,7 +99,8 @@ void TcpServer::serverLoop() {
         serverSocket = -1;
         return;
     }
-
+    
+    // 클라이언트 접속 대기
     if (listen(serverSocket, 5) < 0) {
         logger.log("TCP ERROR listen failed");
 #ifdef _WIN32
@@ -126,7 +136,8 @@ void TcpServer::serverLoop() {
             continue;
         }
 #endif
-
+        
+        // 접속한 클라이언트 IP 확인
         char clientIp[INET_ADDRSTRLEN] = { 0 };
         inet_ntop(AF_INET, &clientAddr.sin_addr, clientIp, INET_ADDRSTRLEN);
         std::string clientIpStr = clientIp;
@@ -142,14 +153,16 @@ void TcpServer::serverLoop() {
 
         if (received > 0) {
             std::string command(buffer, received);
-
+            
+            // 줄바꿈/공백 제거
             while (!command.empty() &&
                 (command.back() == '\n' || command.back() == '\r' || command.back() == ' ' || command.back() == '\t')) {
                 command.pop_back();
             }
 
             logger.log("TCP CMD from " + clientIpStr + ": " + command);
-
+            
+            // 명령 실행 후 응답 전송
             std::string response = controller.executeCommand(command);
             logger.log("TCP RESP to " + clientIpStr + ": " + response);
 
@@ -164,7 +177,8 @@ void TcpServer::serverLoop() {
         else {
             logger.log("TCP WARN No data received from " + clientIpStr);
         }
-
+        
+        // 클라이언트 연결 종료
 #ifdef _WIN32
         closesocket(clientSocket);
 #else
