@@ -1,7 +1,7 @@
 # Equipment Control Simulator ⚙️
 
 ## 📊 diagram 
-<img width="503" height="496" alt="TCP drawio" src="https://github.com/user-attachments/assets/427e4173-8aeb-4ec4-9f0a-40b34a2d2890" />
+<img width="503" height="496" alt="TCP drawio" src="https://github.com/user-attachments/assets/669484b8-6e4d-4ffa-84ca-caaaa8c50ad6" />
 
 
 ## 🧾 프로젝트 개요
@@ -18,7 +18,7 @@
 - 공정 시퀀스 제어
   - LOAD → HEAT → PROCESS → COOLING → UNLOAD
 - 인터락(안전 조건) 감시
-  - 온도 / 압력 초과 시 즉시 ERROR 전환
+  - 온도 / 압력 / 모터 속도 초과 시 즉시 ERROR 전환
 - AUTO / MANUAL 모드 지원
 - TCP 통신 기반 외부 제어
 - 알람 코드 및 알람 히스토리 관리
@@ -54,6 +54,7 @@
 - 각 단계 수행 중 인터락 검사
   - 온도 > Threshold → ERROR (E001)
   - 압력 > Threshold → ERROR (E002)
+  - 속도 > Threshold → ERROR (E003)
 - ERROR 발생 시 장비 정지 및 알람 기록
 - RESET 시 IDLE 상태로 복귀
 - AUTO 모드 시 공정 반복 수행
