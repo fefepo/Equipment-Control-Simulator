@@ -1,5 +1,5 @@
-# Equipment Control Simulator ⚙️
-
+# 장비 제어 시뮬레이터 ⚙️
+ 
 ## 📊 순서도
 <img width="503" height="496" alt="TCP drawio" src="https://github.com/user-attachments/assets/669484b8-6e4d-4ffa-84ca-caaaa8c50ad6" />
 
