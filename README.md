@@ -2,36 +2,6 @@
  
 ## 📊 미리보기
 
-<p align="center">
-<img width="45%" height="1030" alt="그림 1" src="https://github.com/user-attachments/assets/d464b9f3-2175-4332-835b-08b5bc464eb1" />
-<img width="45%" height="1008" alt="그림 2" src="https://github.com/user-attachments/assets/038a76f3-1324-419d-8460-a9b855e07681" />
-</p>
-
-<img width="50%" height="983" alt="그림 3" src="https://github.com/user-attachments/assets/6a150a56-e4f0-4600-b65b-afb90eaaab68" />
-
-### 터미널 실행 환경 x,y,z 축 제어 / 장비 상태 전환 및 자동 공정 시퀀스 수행
-
-
-<img width="1654" height="366" alt="tcp 통신" src="https://github.com/user-attachments/assets/1eb232ad-6618-414c-9311-1f572e361acb" />
-
-### TCP 기반(Socket 통신) 클라이언트-서버 통신 테스트 // PowerShell을 TCP 클라이언트로 활용하여, 장비 서버와의 명령 송수신을 테스트하고 통신 동작을 검증
-
-
-<p align="center">
-<img width="45%" height="300" alt="그림2" src="https://github.com/user-attachments/assets/9f6dd651-2b73-42e3-83e4-ad888a05ec3c" />
-<img width="45%" height="300" alt="image" src="https://github.com/user-attachments/assets/3dbc85d5-1ebe-4160-b1a8-7b2dbe4e1be5" />
-</p>
-
-### 좌표 위치 조건 지정 / 모션 제어 축 위치 검사 로직(START 전에 X/Y/Z 축이 요구 위치에 있는지 확인하는 시작 조건 검사)
-
-
-
-<img width="45%" height="405" alt="image" src="https://github.com/user-attachments/assets/0e6dcca9-fafc-43aa-aaf5-0003b4125d5f" />
-<img width="386" height="213" alt="image" src="https://github.com/user-attachments/assets/7d9d9d3f-32ce-494f-9036-8272a6f27228" />
-
-### 온도·압력·모터 속도 기반 설비 보호 인터락 / json 파일을 이용한 외부에서 설정 파일 관리(확성정 효과)
-
-
 
 ## 🧾 프로젝트 개요
 장비 제어 소프트웨어의 구조를 이해하기 위해  
