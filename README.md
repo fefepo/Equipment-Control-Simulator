@@ -3,12 +3,11 @@
 ## 📊 순서도
 <p align="center">
 <img width="45%" height="300" alt="그림2" src="https://github.com/user-attachments/assets/9f6dd651-2b73-42e3-83e4-ad888a05ec3c" />
-<img width="45%" height="300" alt="그림1" src="https://github.com/user-attachments/assets/e996fef1-dabb-4b59-96eb-d9b4bbe04bb3" />
+<img width="45%" height="300" alt="image" src="https://github.com/user-attachments/assets/3dbc85d5-1ebe-4160-b1a8-7b2dbe4e1be5" />
 </p>
 
 ### 좌표 위치 설정 및 모션 제어 축 위치 검사 로직(START 전에 X/Y/Z 축이 요구 위치에 있는지 확인하는 시작 조건 검사)
-
-<img width="688" height="405" alt="image" src="https://github.com/user-attachments/assets/0e6dcca9-fafc-43aa-aaf5-0003b4125d5f" />
+<img width="45%" height="405" alt="image" src="https://github.com/user-attachments/assets/0e6dcca9-fafc-43aa-aaf5-0003b4125d5f" />
 
 ### 온도·압력·모터 속도 기반 설비 보호 인터락
 
