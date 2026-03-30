@@ -2,8 +2,8 @@
  
 ## 📊 순서도
 <p align="center">
-<img width="50%" height="277" alt="그림1" src="https://github.com/user-attachments/assets/f29270e7-c8a9-4dd4-abba-949404035255" />
-<img width="50%" height="268" alt="그림2" src="https://github.com/user-attachments/assets/a68c3e5f-cc71-4502-a727-fa6365fe4342" />
+<img width="45%" height="300" alt="그림2" src="https://github.com/user-attachments/assets/9f6dd651-2b73-42e3-83e4-ad888a05ec3c" />
+<img width="45%" height="300" alt="그림1" src="https://github.com/user-attachments/assets/e996fef1-dabb-4b59-96eb-d9b4bbe04bb3" />
 </p>
 
 ### 좌표 위치 설정 및 모션 제어 축 위치 검사 로직(START 전에 X/Y/Z 축이 요구 위치에 있는지 확인하는 시작 조건 검사)
