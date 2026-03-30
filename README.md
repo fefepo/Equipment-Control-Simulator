@@ -3,11 +3,11 @@
 ## 📊 미리보기
 
 <p align="center">
-<img width="955" height="1030" alt="그림 1" src="https://github.com/user-attachments/assets/d464b9f3-2175-4332-835b-08b5bc464eb1" />
-<img width="854" height="1008" alt="그림 2" src="https://github.com/user-attachments/assets/038a76f3-1324-419d-8460-a9b855e07681" />
+<img width="45%" height="1030" alt="그림 1" src="https://github.com/user-attachments/assets/d464b9f3-2175-4332-835b-08b5bc464eb1" />
+<img width="45%" height="1008" alt="그림 2" src="https://github.com/user-attachments/assets/038a76f3-1324-419d-8460-a9b855e07681" />
 </p>
 
-<img width="932" height="983" alt="그림 3" src="https://github.com/user-attachments/assets/6a150a56-e4f0-4600-b65b-afb90eaaab68" />
+<img width="50%" height="983" alt="그림 3" src="https://github.com/user-attachments/assets/6a150a56-e4f0-4600-b65b-afb90eaaab68" />
 
 ### 터미널 실행 환경 x,y,z 축 제어 / 장비 상태 전환 및 자동 공정 시퀀스 수행
 
