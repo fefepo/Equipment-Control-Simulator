@@ -11,7 +11,9 @@
 #include "EquipmentController.hpp"
 #include "TcpServer.hpp"
 
+
 int main() {
+
     std::cout << "Current working directory: "
         << std::filesystem::current_path().string() << "\n";
 

@@ -131,6 +131,8 @@
     <ClCompile Include="EquipmentController.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MotionController.cpp" />
+    <ClCompile Include="MotionController.hpp" />
     <ClCompile Include="TcpServer.cpp" />
   </ItemGroup>
   <ItemGroup>

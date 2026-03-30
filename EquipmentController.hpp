@@ -6,6 +6,8 @@
 
 #include "Logger.hpp"
 #include "Config.hpp"
+#include "MotionController.hpp"
+
 
 enum class EquipmentState {
     IDLE,
@@ -54,11 +56,18 @@ private:
     Logger& logger;
     const Config& config;
 
+    MotionController motionController;
+
     void changeState(EquipmentState newState);
     void changeStep(ProcessStep newStep);
     void setAlarm(const std::string& code, const std::string& message);
     void clearAlarm();
     std::string getAlarmHistoryString() const;
+    std::string executeMotionCommand(const std::string& rawCommand);
+
+    bool isAxisInPosition(const Axis& axis, double target, double tolerance = 0.5) const;
+    bool canStartProcess(std::string& reason) const;
+
 
 public:
     EquipmentController(Logger& logRef, const Config& cfg);
@@ -72,4 +81,5 @@ public:
 
     std::string getStatusString() const;
     std::string executeCommand(const std::string& rawCommand);
+
 };

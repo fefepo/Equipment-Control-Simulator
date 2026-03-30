@@ -30,6 +30,12 @@
     <ClCompile Include="Config.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="MotionController.hpp">
+      <Filter>헤더 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MotionController.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Logger.hpp">

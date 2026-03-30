@@ -1,11 +1,31 @@
 Timestamp,AlarmCode,AlarmMessage
-2026-03-27 02:49:40,E001,Overheat detected during step PROCESS
-2026-03-27 02:51:11,E001,Overheat detected during step PROCESS
-2026-03-27 02:54:24,E002,Overpressure detected during step PROCESS
-2026-03-27 02:55:42,E002,Overpressure detected during step PROCESS
-2026-03-27 02:56:34,E002,Overpressure detected during step PROCESS
-2026-03-27 02:56:54,E002,Overpressure detected during step PROCESS
-2026-03-27 02:57:28,E002,Overpressure detected during step LOAD
-2026-03-27 19:02:58,E001,Overheat detected during step HEAT
-2026-03-27 19:08:10,E001,Overheat detected during step PROCESS
-2026-03-27 19:14:12,E001,Overheat detected during step COOLING
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+2026-03-31 01:58:52,E202,X axis home is required
+2026-03-31 01:59:31,E202,X axis home is required
+2026-03-31 02:00:25,E202,X axis home is required
+2026-03-31 02:01:44,E201,Y servo is OFF
+2026-03-31 02:02:00,E202,Y axis home is required
+2026-03-31 02:05:34,E202,Y axis home is required
+2026-03-31 02:05:42,E202,Y axis home is required
+2026-03-31 02:34:14,E202,X axis home is required
+2026-03-31 02:38:29,E201,Y servo is OFF
+2026-03-31 03:03:26,E202,X axis home is required
+2026-03-31 03:03:34,E202,X axis home is required
+2026-03-31 03:16:46,E201,Z servo is OFF
+2026-03-31 03:19:28,E001,Overheat detected during step PROCESS
+2026-03-31 03:20:37,E001,Overheat detected during step COOLING
+2026-03-31 06:21:06,E201,Y servo is OFF
