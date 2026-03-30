@@ -2,15 +2,15 @@
  
 ## 📊 순서도
 <p align="center">
-<img width="437" height="260" alt="image" src="https://github.com/user-attachments/assets/4cbd9ac9-c3a1-4a14-b7eb-3c485def1ffa" />
-<img width="531" height="279" alt="image" src="https://github.com/user-attachments/assets/22b5d13e-ac10-45ee-9b14-6529b5b682b9" />
+<img width="573" height="277" alt="그림1" src="https://github.com/user-attachments/assets/f29270e7-c8a9-4dd4-abba-949404035255" />
+<img width="482" height="268" alt="그림2" src="https://github.com/user-attachments/assets/a68c3e5f-cc71-4502-a727-fa6365fe4342" />
 </p>
 
-# 좌표 위치 설정 및 모션 제어 축 위치 검사 로직(START 전에 X/Y/Z 축이 요구 위치에 있는지 확인하는 시작 조건 검사)
+### 좌표 위치 설정 및 모션 제어 축 위치 검사 로직(START 전에 X/Y/Z 축이 요구 위치에 있는지 확인하는 시작 조건 검사)
 
 <img width="688" height="405" alt="image" src="https://github.com/user-attachments/assets/0e6dcca9-fafc-43aa-aaf5-0003b4125d5f" />
 
-# 온도·압력·모터 속도 기반 설비 보호 인터락
+### 온도·압력·모터 속도 기반 설비 보호 인터락
 
 ## 🧾 프로젝트 개요
 장비 제어 소프트웨어의 구조를 이해하기 위해  
