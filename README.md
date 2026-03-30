@@ -81,7 +81,10 @@
 - JSON 기반 **설정 외부화로 확장성 확보**
 
   
-'''bash
+## 🚀 실행 방법
+
+```bash
+
 # 상태 머신 명령어
 INIT
 → 장비 초기화 (IDLE → INITIALIZING → READY)
