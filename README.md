@@ -1,18 +1,20 @@
 # 장비 제어 시뮬레이터 ⚙️
  
-## 📊 순서도
-<p align="center">
+## 📊 미리보기
+
+<img width="1654" height="366" alt="tcp 통신" src="https://github.com/user-attachments/assets/1eb232ad-6618-414c-9311-1f572e361acb" />
+### TCP 기반(Socket 통신) 클라이언트-서버 통신 테스트 // PowerShell을 TCP 클라이언트로 활용하여, 장비 서버와의 명령 송수신을 테스트하고 통신 동작을 검증
+
 <img width="45%" height="300" alt="그림2" src="https://github.com/user-attachments/assets/9f6dd651-2b73-42e3-83e4-ad888a05ec3c" />
 <img width="45%" height="300" alt="image" src="https://github.com/user-attachments/assets/3dbc85d5-1ebe-4160-b1a8-7b2dbe4e1be5" />
-</p>
-
 ### 좌표 위치 설정 / 모션 제어 축 위치 검사 로직(START 전에 X/Y/Z 축이 요구 위치에 있는지 확인하는 시작 조건 검사)
 
 
 <img width="45%" height="405" alt="image" src="https://github.com/user-attachments/assets/0e6dcca9-fafc-43aa-aaf5-0003b4125d5f" />
 <img width="386" height="213" alt="image" src="https://github.com/user-attachments/assets/7d9d9d3f-32ce-494f-9036-8272a6f27228" />
+### 온도·압력·모터 속도 기반 설비 보호 인터락 / json 파일을 이용한 외부에서 설정 파일 관리(확성정 효과)
 
-### 온도·압력·모터 속도 기반 설비 보호 인터락 / json 파일을 이용한 외부 설정 관리(확성정 효과)
+
 
 ## 🧾 프로젝트 개요
 장비 제어 소프트웨어의 구조를 이해하기 위해  
