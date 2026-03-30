@@ -3,6 +3,7 @@
 ## 📊 미리보기
 
 <img width="1654" height="366" alt="tcp 통신" src="https://github.com/user-attachments/assets/1eb232ad-6618-414c-9311-1f572e361acb" />
+
 ### TCP 기반(Socket 통신) 클라이언트-서버 통신 테스트 // PowerShell을 TCP 클라이언트로 활용하여, 장비 서버와의 명령 송수신을 테스트하고 통신 동작을 검증
 
 
