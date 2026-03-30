@@ -1,7 +1,7 @@
 # 장비 제어 시뮬레이터 ⚙️
  
 ## 📊 순서도
-<img width="503" height="496" alt="TCP drawio" src="https://github.com/user-attachments/assets/669484b8-6e4d-4ffa-84ca-caaaa8c50ad6" />
+<img width="786" height="402" alt="image" src="https://github.com/user-attachments/assets/f4d220f6-eac6-4b22-9c37-7a7e41956ceb" />
 
 
 ## 🧾 프로젝트 개요
