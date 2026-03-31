@@ -29,3 +29,8 @@ Timestamp,AlarmCode,AlarmMessage
 2026-03-31 03:19:28,E001,Overheat detected during step PROCESS
 2026-03-31 03:20:37,E001,Overheat detected during step COOLING
 2026-03-31 06:21:06,E201,Y servo is OFF
+2026-03-31 06:54:26,E204,Invalid axis name
+2026-03-31 06:54:37,E202,X axis home is required
+2026-03-31 06:57:51,E001,Overheat detected during step HEAT
+2026-03-31 17:56:02,E201,X servo is OFF
+2026-03-31 17:56:05,E202,Z axis home is required
