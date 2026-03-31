@@ -2,8 +2,13 @@
  
 ## 📊 순서도
 
-<img width="503" height="496" alt="사진1 drawio" src="https://github.com/user-attachments/assets/0fe1e0cb-09cd-4bd5-846d-0c376a2c2223" />
-<img width="361" height="627" alt="그림1 drawio" src="https://github.com/user-attachments/assets/8c259f23-71e1-4ac3-a9ab-c453eb8f635b" />
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/0fe1e0cb-09cd-4bd5-846d-0c376a2c2223"/></td>
+    <td><img src="https://github.com/user-attachments/assets/8c259f23-71e1-4ac3-a9ab-c453eb8f635b"/></td>
+  </tr>
+</table>
+
 
 ## 🧾 프로젝트 개요
 장비 제어 소프트웨어의 구조를 이해하기 위해  
