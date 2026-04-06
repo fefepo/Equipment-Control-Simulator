@@ -20,15 +20,13 @@
 
 ## ⚙️ 주요 기능
 
-- 3축 모션 제어 (X/Y/Z) 및 명령 기반 위치 제어
-- 위치 조건 기반 START 제어 (지정 좌표 만족 시 공정 시작)
-- 모션 상태 관리 및 명령 인터락 (Servo/Home 상태 검증)
+- 3축 모션 제어 (X/Y/Z) 및 명령 기반 위치 제어 // (지정 좌표 만족 시 공정 시작)
 - 상태 머신 기반 장비 제어
-  ㄴ IDLE → INITIALIZING → READY → RUNNING → STOPPING / ERROR → READY / IDLE
+  -> IDLE → INITIALIZING → READY → RUNNING → STOPPING / ERROR → READY / IDLE
 - 공정 시퀀스 제어
-  ㄴ LOAD → HEAT → PROCESS → COOLING → UNLOAD
+  -> LOAD → HEAT → PROCESS → COOLING → UNLOAD
 - 인터락(안전 조건) 감시
-  ㄴ 온도 / 압력 / 모터 속도 초과 시 즉시 ERROR 전환
+  -> 온도 / 압력 / 모터 속도 초과 시 즉시 ERROR 전환
 - AUTO / MANUAL 모드 지원
 - TCP 통신 기반 외부 제어
 - 알람 코드 및 알람 히스토리 관리
